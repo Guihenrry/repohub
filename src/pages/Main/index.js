@@ -8,9 +8,29 @@ import { Container, Form, SubmitButton, List } from './styles';
 export default class Main extends Component {
   state = {
     newRepo: '',
-    repositories: [{ name: 'teste/teste' }],
+    repositories: [],
     loading: false,
   };
+
+  // Load repositories from localStorage
+  componentDidMount() {
+    const repositories = localStorage.getItem('repositories');
+
+    if (repositories) {
+      this.setState({
+        repositories: JSON.parse(repositories),
+      });
+    }
+  }
+
+  // Save repositories in localStorage
+  componentDidUpdate(_, prevState) {
+    const { repositories } = this.state;
+
+    if (repositories !== prevState.repositories) {
+      localStorage.setItem('repositories', JSON.stringify(repositories));
+    }
+  }
 
   handleInputChange = e => {
     this.setState({ newRepo: e.target.value });
