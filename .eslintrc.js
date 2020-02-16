@@ -32,6 +32,7 @@ module.exports = {
       'warn',
       { extensions: ['.jsx', '.js'] }
     ],
-    "react/state-in-constructor": 'off'
+    "react/state-in-constructor": 'off',
+    "react/static-property-placement": 'off'
   },
 };
