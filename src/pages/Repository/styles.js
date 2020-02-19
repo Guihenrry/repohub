@@ -102,3 +102,46 @@ export const IssueLit = styled.ul`
     }
   }
 `;
+
+export const IssueFilter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+
+  > button {
+    border: none;
+    background: #eee;
+    padding: 10px;
+
+    :hover {
+      background: #ddd;
+    }
+
+    & + button {
+      margin-left: 10px;
+    }
+
+    :nth-child(${props => props.active + 1}) {
+      background: #7159c1;
+      color: #fff;
+    }
+  }
+`;
+
+export const PageActions = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  > button {
+    border: none;
+    background: none;
+    padding: 10px;
+
+    :disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+`;
