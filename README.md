@@ -10,6 +10,8 @@
 
 Aplicação que permite cadastrar repositórios do GitHub e listar suas issues.
 
+### [Live Demo](https://guihenrry-repohub.netlify.com/)
+
 ![Screenshot Main](screenshot-main.png)
 ![Screenshot Repository](screenshot-repository.png)
 
